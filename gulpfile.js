@@ -60,16 +60,16 @@ build.configureWebpack.mergeConfig({
     //   console.log(rule);
     // });
 
-    generatedConfiguration.plugins.push(function () {
-      this.hooks.done.tapAsync('done', function (stats, callback) {
-        if (stats.compilation.errors.length > 0) {
-          throw new Error(
-            stats.compilation.errors.map(err => err.message || err)
-          );
-        }
-        callback();
-      });
-    });
+    // generatedConfiguration.plugins.push(function () {
+    //   this.hooks.done.tapAsync('done', function (stats, callback) {
+    //     if (stats.compilation.errors.length > 0) {
+    //       throw new Error(
+    //         stats.compilation.errors.map(err => err.message || err)
+    //       );
+    //     }
+    //     callback();
+    //   });
+    // });
 
     //console.log(JSON.stringify(generatedConfiguration));
 
