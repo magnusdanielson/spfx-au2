@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "h-2-o-client-side-solution",
+    "id": "38743af1-b94d-4178-ba01-f4e60928cc0d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "h2o description"
+      },
+      "longDescription": {
+        "default": "h2o description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "h-2-o Feature",
+        "description": "The feature that activates elements of the h-2-o solution.",
+        "id": "a0cb42a2-28be-42ee-8c70-7be1cac75b62",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/h-2-o.sppkg"
+  }
+}

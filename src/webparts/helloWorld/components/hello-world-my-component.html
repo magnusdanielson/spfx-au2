@@ -1,0 +1,16 @@
+<require from="./hello-world-more-stuff"></require>
+<section class="${styles.myTest} ${!!context.sdks.microsoftTeams ? styles.teams : ''}">
+    <div class="${styles.welcome}">
+        <img alt=""
+            src="${imageUrl}"
+            class="${styles.welcomeImage}" />
+        <h2>Well done, ${context.pageContext.user.displayName}!</h2>
+        <div>${_environmentMessage}</div>
+        <div>Web part property value: <strong>${properties.description}</strong></div>
+        <div class="my">Message from hello-world-my-component is ${message}</div>
+    </div>
+    <div>
+        <hello-world-more-stuff></hello-world-more-stuff>
+        <hello-world-other-stuff></hello-world-other-stuff>
+    </div>
+</section>
