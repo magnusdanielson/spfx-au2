@@ -4,6 +4,7 @@ const au2gulp = require('@aurelia/plugin-gulp').default;
 const build = require('@microsoft/sp-build-web');
 const sass = require("@microsoft/gulp-core-build-sass");
 build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
+build.lintCmd.enabled = false;
 
 var getTasks = build.rig.getTasks;
 build.rig.getTasks = function () {
