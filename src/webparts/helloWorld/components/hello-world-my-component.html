@@ -1,9 +1,15 @@
 <require from="./hello-world-more-stuff"></require>
+<require from="./hoo-toggle"></require>
+<require from="./hoo-button"></require>
+<require from="./hoo-input"></require>
+<require from="./hoo-label"></require>
+<require from="./hoo-radio-button"></require>
+<require from="./hoo-searchbox"></require>
+<require from="./hoo-select"></require>
+
 <section class="${styles.myTest} ${!!context.sdks.microsoftTeams ? styles.teams : ''}">
     <div class="${styles.welcome}">
-        <img alt=""
-            src="${imageUrl}"
-            class="${styles.welcomeImage}" />
+        <img alt="" src="${imageUrl}" class="${styles.welcomeImage}" />
         <h2>Well done, ${context.pageContext.user.displayName}!</h2>
         <div>${_environmentMessage}</div>
         <div>Web part property value: <strong>${properties.description}</strong></div>
@@ -12,5 +18,25 @@
     <div>
         <hello-world-more-stuff></hello-world-more-stuff>
         <hello-world-other-stuff></hello-world-other-stuff>
+        <div class="${styles.hTWOoSample}">
+            <button class="hoo-button">
+                <div class="hoo-button-label">My First H2O button</div>
+            </button>
+            <input type="date" class="hoo-input-date"  min="2018-01-01" max="2030-12-31">
+            <div class="hoo-toggle">
+                <input type="checkbox" class="hoo-toggle-cb" name="randomLabel" id="randomID"><label for="randomID" class="hoo-toggle-label"><span class="hoo-toggle-slider"></span><span class="hoo-toggle-checked">On</span><span class="hoo-toggle-unchecked">Off</span></label>
+            </div>
+            <hoo-toggle></hoo-toggle>
+            
+            <hoo-button><div au-slot="default">My Button</div></hoo-button>
+
+            <hoo-label><div>My label</div></hoo-label>
+
+            <hoo-input></hoo-input>
+            <hoo-radio-button></hoo-radio-button>
+            <hoo-searchbox></hoo-searchbox>
+            <hoo-select></hoo-select>
+
+        </div>
     </div>
 </section>

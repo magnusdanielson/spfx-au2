@@ -31,10 +31,10 @@ sass.default.mergeConfig({
 let aureliaGulpConventionSubTask = build.subTask('aurelia-gulp-subtask', function(gulp, buildOptions, done) {
 
 gulp.src('./src/**/*.ts')
-  .pipe(au2gulp()).pipe(gulp.dest("autemp")).on('finish', ()=>
+  .pipe(au2gulp({hmr: false})).pipe(gulp.dest("autemp")).on('finish', ()=>
   {
     gulp.src('src/**/*.html')
-    .pipe(au2gulp()).pipe(gulp.dest("lib")).on('finish', () => 
+    .pipe(au2gulp({hmr: false})).pipe(gulp.dest("lib")).on('finish', () => 
     {
       gulp.src('autemp/**/*.css')
       .pipe(gulp.dest("lib")).on('finish', () => done());
