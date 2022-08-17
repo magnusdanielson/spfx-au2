@@ -58,9 +58,17 @@ build.configureWebpack.mergeConfig({
     
     // generatedConfiguration.module.rules.forEach( (rule) =>
     // {
+      
     //   console.log(rule);
     // });
 
+    generatedConfiguration.module.rules.push(
+      {
+        include: /node_modules/,
+        test: /\.mjs$/,
+        type: 'javascript/auto'
+      }
+    );
     // generatedConfiguration.plugins.push(function () {
     //   this.hooks.done.tapAsync('done', function (stats, callback) {
     //     if (stats.compilation.errors.length > 0) {
